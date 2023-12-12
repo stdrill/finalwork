@@ -44,7 +44,8 @@ wget -O ~/google-earth.deb https://dl.google.com/dl/earth/client/current/google-
 sudo dpkg -i ~/google-earth.deb
 sudo dpkg-query -l | grep google
 ```
-![](D:\images\4.png)
+![](D:\images\4.png)<img width="831" alt="4" src="https://github.com/stdrill/finalwork/assets/109695593/e7542134-306e-4f0f-b383-26512ec602d9">
+
 
 Удалим пакет:
 ```
@@ -52,10 +53,12 @@ sudo dpkg -r google-earth-pro-stable
 ```
 
 # 5. Выложить историю команд в терминале ubuntu
-![](D:\images\5.png)
+![](D:\images\5.png)<img width="721" alt="5" src="https://github.com/stdrill/finalwork/assets/109695593/d952a732-ce63-4b22-a0ba-2fcb6662b3a6">
+
 
 # 6. Нарисовать диаграмму, в которой есть класс родительский класс, домашние животные и вьючные животные, в составы которых в случае домашних животных войдут классы: собаки, кошки, хомяки, а в класс вьючные животные войдут: Лошади, верблюды и ослы).
-![](D:\images\6.png)
+![](D:\images\6.png)![6](https://github.com/stdrill/finalwork/assets/109695593/88be2359-39eb-4aa5-9753-3d3039cff118)
+
 
 # 7.  В подключенном MySQL репозитории создать базу данных “Друзья человека”
 
@@ -66,7 +69,8 @@ mysql
 DROP DATABASE IF EXISTS human_friends;
 CREATE DATABASE human_friends;
 ```
-![](D:\images\7.png)
+![](D:\images\7.png)![7](https://github.com/stdrill/finalwork/assets/109695593/16edd5d8-e0b8-4bbb-a3a4-632e01df14dc)
+
 
 # 8. Создать таблицы с иерархией из диаграммы в БД
 ```
@@ -150,7 +154,8 @@ CREATE TABLE donkeys
     	FOREIGN KEY (id_pack_animals)  REFERENCES pack_animals (id)
  );
 ```
-![](D:\images\8.png)
+![](D:\images\8.png)![8](https://github.com/stdrill/finalwork/assets/109695593/0cb01e48-a6cc-45c9-a36b-6ad961f82bc9)
+
 
 # 9. Заполнить низкоуровневые таблицы именами(животных), командами которые они выполняют и датами рождения
 ```
@@ -225,13 +230,15 @@ VALUES
 (1, "donkey 1", 3, "comands 1, 1, 1", '2022-05-01'),
 (2, "donkey 2", 3, "comands 1, 2, 1", '2022-09-19');
 ```
-![](D:\images\9.png)
+![](D:\images\9.png)![9](https://github.com/stdrill/finalwork/assets/109695593/8e848887-16e6-4e9b-aa22-d7c8c5c975f7)
+
 
 # 10. Удалить из таблицы верблюдов, т.к. верблюдов решили перевезти в другой питомник на зимовку. Объединить таблицы лошади, и ослы в одну таблицу
 ```
 DROP TABLE camels;
 ```
-![](D:\images\10_1.png)
+![](D:\images\10_1.png)![10_1](https://github.com/stdrill/finalwork/assets/109695593/30250746-22fb-4172-be4f-2490b9959dfb)
+
 ```
 SELECT *
 FROM horses
@@ -239,7 +246,8 @@ UNION
 SELECT *
 FROM donkeys;
 ```
-![](D:\images\10_2.png)
+![](D:\images\10_2.png)![10_2](https://github.com/stdrill/finalwork/assets/109695593/f954bb23-0ae9-48a2-9b38-2c9c16f0e006)
+
 
 # 11. Создать новую таблицу “молодые животные” в которую попадут все животные старше 1 года, но младше 3 лет и в отдельном столбце с точностью до месяца подсчитать возраст животных в новой таблице
 ```
@@ -282,7 +290,8 @@ FROM
 	WHERE DATEDIFF(NOW(), birth_date) BETWEEN 365 AND 365 * 3
 ) as t_animals;
 ```
-![](D:\images\11.png)
+![](D:\images\11.png)![11](https://github.com/stdrill/finalwork/assets/109695593/0d2633b0-926a-43e3-b8b1-1abf08ab8347)
+
 
 # 12. Объединить все таблицы в одну, при этом сохраняя поля, указывающие на прошлую принадлежность к старым таблицам.
 ```
@@ -335,5 +344,6 @@ FROM
 INNER JOIN view_pack_animals
 ON t_pack_animals.id_pack_animals = view_pack_animals.id;
 ```
-![](D:\images\12.png)
+![](D:\images\12.png)![12](https://github.com/stdrill/finalwork/assets/109695593/710bc0a7-2c26-498b-8691-651c06f50c33)
+
 
