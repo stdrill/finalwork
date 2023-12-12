@@ -17,7 +17,8 @@ cat 'Домашние животные' 'Вьючные животные' > file
 cat file
 ```
 
-![](D:\images\1.png)
+![](D:\images\1.png)<img width="188" alt="1" src="https://github.com/stdrill/finalwork/assets/109695593/7ed90c5e-7cd4-4c74-b6af-8a2b609dbe58">
+
 
 ```
 mv file 'Друзья человека'
